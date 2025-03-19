@@ -1,0 +1,13 @@
+fetch("http://localhost:90/api_pengingat/index.php/tambah_pengingat", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        waktu: "08:00:00",
+        jumlah_air: 250
+    })
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error("Error:", error));
